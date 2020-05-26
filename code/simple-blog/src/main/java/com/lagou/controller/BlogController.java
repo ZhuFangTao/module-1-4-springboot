@@ -23,7 +23,7 @@ public class BlogController {
     @Autowired
     private ArticleMapper articleMapper;
 
-    @RequestMapping("/blog")
+    @RequestMapping("/index")
     public String toLoginPage(Model model, HttpServletRequest request){
         int pageNum;
         int pageSize;
