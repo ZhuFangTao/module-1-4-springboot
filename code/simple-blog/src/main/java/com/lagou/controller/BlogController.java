@@ -32,7 +32,7 @@ public class BlogController {
             pageSize = Integer.parseInt(request.getParameter("pageSize"));
         }catch (Exception e){
             pageNum = 0;
-            pageSize = 2;
+            pageSize = 3;
         }
         List<BlogArticle> articleList = articleMapper.findAll(PageRequest.of(pageNum,pageSize, Sort.by("id"))).getContent();
         model.addAttribute("articleList",articleList);
